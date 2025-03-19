@@ -7,8 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	features = {"src/test/resources"},
+	features = {"src/test/resources/features/Uber.feature"},
 	glue = {"stepdefinitions"},
+	tags = "@All",
 	plugin = {"pretty"}
 )
 public class UberBookingTest {
