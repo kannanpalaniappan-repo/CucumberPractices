@@ -11,7 +11,7 @@ When User selects car "sedan" and pick up point "Bangalore" and drop location "P
 Then Driver starts the journey
 And Driver ends the journey
 Then User pays 1000 USD
-
+Then user clicks the homePage
 @regression @smoke
 Scenario: Booking Cab Suv
 Given User wants to select a car type "suv" from uber app

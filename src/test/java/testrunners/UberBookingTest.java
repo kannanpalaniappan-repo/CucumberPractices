@@ -10,7 +10,13 @@ import io.cucumber.junit.CucumberOptions;
 	features = {"src/test/resources/features/Uber.feature"},
 	glue = {"stepdefinitions"},
 	tags = "@All",
-	plugin = {"pretty"}
+	plugin = {"pretty",
+			"json:target/MyReports/reports.json",
+			"junit:target/MyReports/reports.xml"},
+		/* publish = true, */
+	monochrome = false,
+	dryRun = false
+	
 )
 public class UberBookingTest {
 
