@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 	features = {"src/test/resources/features/Uber.feature"},
 	glue = {"stepdefinitions"},
-	tags = "@All",
+	tags = "not @regression",
 	plugin = {"pretty",
 			"json:target/MyReports/reports.json",
 			"junit:target/MyReports/reports.xml"},
