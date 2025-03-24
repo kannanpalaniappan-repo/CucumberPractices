@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import java.util.List;
+import java.util.Map;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -20,6 +21,19 @@ public class RegistrationSteps {
 	    
 	    for(List<String> userList: userLists) {
 	    	System.out.println(userList);
+	    }
+	}
+	
+	@When("user enters following details with columns")
+	public void user_enters_following_details_with_columns(DataTable dataTable) {
+	    List<Map<String,String>> userList = dataTable.asMaps(String.class,String.class);
+	    //System.out.println(userList);
+	    for(Map<String,String> e : userList) {
+	    	System.out.println(e.get("name"));
+	    	System.out.println(e.get("email"));
+	    	System.out.println(e.get("phone"));
+	    	System.out.println(e.get("city"));
+	    	System.out.println("-------------------------------------");
 	    }
 	}
 
